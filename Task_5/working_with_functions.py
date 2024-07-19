@@ -1,5 +1,5 @@
-from typing import List, Any
-
+from typing import List, Union, Any
+ 
 def print_rev_scope(num: int) -> None:
     for i in range(num + 1):
         print(num - i, end = " ")
@@ -59,13 +59,3 @@ if __name__ == "__main__":
 
     print(f"\nprinting max element of {ls}")
     print(max_list_element(ls))
-
-
-
-
-
-
-
-
-
-
