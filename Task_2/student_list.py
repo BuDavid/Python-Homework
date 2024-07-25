@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Optional
 
 class StudentList:
     LOWEST_SCORE = 0
@@ -7,7 +7,7 @@ class StudentList:
     def __init__(self):
         self.dic = {}
 
-    def add_student(self, name: str, score: Union[int, None] = None) -> None:
+    def add_student(self, name: str, score: Optional[int] = None) -> None:
         if name not in self.dic:
             self.dic[name] = score if self.is_valid(score) else None
 
@@ -33,7 +33,7 @@ class StudentList:
     def __len__(self) -> int:
         return len(self.dic)
 
-    def is_valid(self, score: Union[int, None]) -> bool:
+    def is_valid(self, score: Optional[int]) -> bool:
         if score is None or score < self.LOWEST_SCORE or score > self.HIGHEST_SCORE:
             return False
         return True

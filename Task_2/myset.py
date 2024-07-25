@@ -1,10 +1,10 @@
-from typing import Any, Union, List, Optional, Dict
+from typing import Any, List, Optional, Dict
 
 class MySet:
 
     hash_table_size = 10000
     
-    def __init__(self, ls: Optional[Union[List[Any], None]] = None) -> None:
+    def __init__(self, ls: Optional[List[Any]] = None) -> None:
         self.hash_table: Dict[int, Any] = {}
         if ls is not None:
             for element in ls:

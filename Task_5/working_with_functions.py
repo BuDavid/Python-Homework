@@ -1,4 +1,4 @@
-from typing import List, Union, Any
+from typing import List, Any
  
 def print_rev_scope(num: int) -> None:
     for i in range(num + 1):
